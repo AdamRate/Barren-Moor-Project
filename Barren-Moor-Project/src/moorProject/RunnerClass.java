@@ -11,7 +11,7 @@ public class RunnerClass {
 		CoordClass c = new CoordClass();
 
 		boolean playing = true;
-		Player p = new Player(3, 3);
+		Player p = new Player(3, 3,0,0);
 
 		while (playing) {
 			HandleUserInput.readInput(p, c.createGridPositions(gridPos));
