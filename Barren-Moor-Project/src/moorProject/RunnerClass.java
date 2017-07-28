@@ -3,31 +3,20 @@ package moorProject;
 public class RunnerClass {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("You find yourself in the middle of a swamp");
-		//playSound.play();
+		// playSound.play();
 		System.out.println("Try using different commands to escape");
-		
+		int[][] gridPos = new int[7][7];
 		CoordClass c = new CoordClass();
-		c.createGridPositions();
 
-		System.out.println("You are " + c.calcDistanceAway() + "m Away from the objective");
-			boolean playing = true;
-		//while (playing != false){
-			//readInput();
-			//Update Player on surroundings/distance away
-			//Read User input
-			//Handle User input
-		//}
-		
+		boolean playing = true;
+		Player p = new Player(3, 3);
 
-		c.moveWest();
-		c.moveWest();
-		c.moveWest();
-		c.moveNorth();
-		c.moveNorth();
-		c.moveNorth();
-		
+		while (playing) {
+			HandleUserInput.readInput(p, c.createGridPositions(gridPos));
+			System.out.println("You are " + p.calcDistanceAway(gridPos) + "m Away from the objective");
+		}
 	}
 
 }
