@@ -16,6 +16,7 @@ public class RunnerClass {
 		while (playing) {
 			HandleUserInput.readInput(p, c.createGridPositions(gridPos));
 			System.out.println("You are " + p.calcDistanceAway(gridPos) + "m Away from the objective");
+			playing = p.checkPlayerAtGoal();
 		}
 	}
 

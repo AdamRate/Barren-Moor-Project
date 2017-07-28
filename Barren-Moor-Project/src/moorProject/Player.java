@@ -80,14 +80,17 @@ public class Player {
 		grid[xLoc][yLoc] = 1;
 	}
 
-	public void checkPlayerAtGoal(){
+	public boolean checkPlayerAtGoal(){
 		if (xLoc == exitXLoc){
 			if(yLoc== exitYLoc){
 				//End Game
 				System.out.println("You find your way to the edge of the swamp and make your way back towards civilisation.");
-					
+					return false;
 			}
 		}
+		
+		return true;
+		
 	}
 
 	public String calcDistanceAway(int[][] grid) {

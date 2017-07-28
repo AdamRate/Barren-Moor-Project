@@ -15,19 +15,19 @@ public class HandleUserInput {
 			switch (readIn) {
 			case "north":
 				p.moveNorth(grid);
-				p.checkPlayerAtGoal();
+				//p.checkPlayerAtGoal();
 				break;
 			case "east":
 				p.moveEast(grid);
-				p.checkPlayerAtGoal();
+			//	p.checkPlayerAtGoal();
 				break;
 			case "south":
 				p.moveSouth(grid);
-				p.checkPlayerAtGoal();
+				//p.checkPlayerAtGoal();
 				break;
 			case "west":
 				p.moveWest(grid);
-				p.checkPlayerAtGoal();
+				//p.checkPlayerAtGoal();
 				break;
 			default:
 				;
