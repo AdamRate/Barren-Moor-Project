@@ -10,19 +10,17 @@ public class RunnerClass {
 		
 		CoordClass c = new CoordClass();
 		c.createGridPositions();
-		int playerX = c.getPlayerXValue();
-		int playerY = c.getPlayerYValue();
-		int destX = c.getDestXValue();
-		int destY = c.getDestYValue();
-		
-		
-		//boolean playing = true;
+
+		System.out.println("You are " + c.calcDistanceAway() + "m Away from the objective");
+			boolean playing = true;
 		//while (playing != false){
-		//System.out.println("You are " + Pythagoras dX and dY + " Away from the objective");
+			//readInput();
 			//Update Player on surroundings/distance away
 			//Read User input
 			//Handle User input
 		//}
+		
+
 		c.moveWest();
 		c.moveWest();
 		c.moveWest();

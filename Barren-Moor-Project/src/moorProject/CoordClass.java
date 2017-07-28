@@ -1,5 +1,7 @@
 package moorProject;
 
+import java.text.DecimalFormat;
+
 public class CoordClass {
 	int playerXValue, goalXValue;
 	int playerYValue, goalYValue;
@@ -71,4 +73,14 @@ public class CoordClass {
 		gridPos[gotX][gotY - 1] = 1;
 	}
 
+	public String calcDistanceAway(){
+		DecimalFormat df = new DecimalFormat("#.##");
+		int playerX = getPlayerXValue();
+		int playerY = getPlayerYValue();
+		int destX = getDestXValue();
+		int destY = getDestYValue();
+		
+		return df.format(Math.sqrt(Math.pow((playerX-destX),2) + Math.pow((playerY-destY),2)));
+	}
+	
 }
